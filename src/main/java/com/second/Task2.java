@@ -13,6 +13,7 @@ public class Task2 extends Task1 implements Runnable {
 
     @Override
     public void run() {
+        semapore = false;
         super.run();
         semapore = true;
     }

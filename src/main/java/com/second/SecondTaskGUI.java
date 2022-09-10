@@ -46,10 +46,9 @@ public class SecondTaskGUI extends JFrame {
             if (!semapore) {
                 System.out.println("Locked!!!");
             } else {
-                semapore = false;
+                t1.get().start();
                 stop2.setEnabled(false);
                 t1.get().setPriority(Thread.MIN_PRIORITY);
-                t1.get().start();
             }
         });
 
@@ -57,10 +56,9 @@ public class SecondTaskGUI extends JFrame {
             if (!semapore) {
                 System.out.println("Locked!!!");
             } else {
-                semapore = false;
+                t2.get().start();
                 stop1.setEnabled(false);
                 t2.get().setPriority(Thread.MAX_PRIORITY);
-                t2.get().start();
             }
         });
 
